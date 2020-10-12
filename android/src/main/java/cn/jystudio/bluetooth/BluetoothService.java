@@ -213,15 +213,6 @@ public class BluetoothService {
 
             BluetoothSocket tmp = null;
 
-            // try to connect with socket inner method firstly.
-            try {
-                tmp = (BluetoothSocket) mmDevice.getClass().getMethod("createRfcommSocket", int.class).invoke(mmDevice, i);
-            } catch (Exception e) {
-            }
-            if (tmp != null) {
-                mmSocket = tmp;
-            }
-
             // try with given uuid
             if (mmSocket == null) {
                 try {
