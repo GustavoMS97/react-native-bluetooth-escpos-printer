@@ -317,7 +317,7 @@ public class RNBluetoothManagerModule extends ReactContextBaseJavaModule
             BluetoothAdapter adapter = this.getBluetoothAdapter();
             if (adapter!=null && adapter.isDiscovering()) {
                 adapter.cancelDiscovery();
-                promise.resolve(true)
+                promise.resolve(true);
             }else {
                  promise.resolve(false);
             }
